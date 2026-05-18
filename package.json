@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "npm install --prefix frontend && npm run build --prefix frontend",
+    "build": "npm install --prefix frontend && npm run build --prefix frontend && shx rm -rf dist && shx cp -r frontend/dist ./dist",
     "start": "node --env-file=.env server.js"
   },
   "keywords": [],
@@ -18,5 +18,8 @@
     "express": "^5.2.1",
     "groq-sdk": "^1.2.0",
     "node-cache": "^5.1.2"
+  },
+  "devDependencies": {
+    "shx": "^0.4.0"
   }
 }

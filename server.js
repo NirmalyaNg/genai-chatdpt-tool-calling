@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 8000;
-const staticDir = path.join(__dirname, 'frontend', 'dist');
+const staticDir = path.join(__dirname, 'dist');
 
 app.use(express.json());
 app.use(cors());
