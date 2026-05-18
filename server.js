@@ -60,7 +60,7 @@ app.post('/chat', async (req, res) => {
   }
 });
 
-app.get('/*splat', (req, res) => {
+app.get(/^(?!\/assets).*/, (req, res) => {
   res.sendFile(path.join(staticDir, 'index.html'));
 });
 
