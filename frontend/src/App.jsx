@@ -111,7 +111,7 @@ const App = () => {
       {isGenerating && <div className='animate-pulse'>Thinking...</div>}
 
       {/* ChatInput */}
-      <div className='fixed inset-x-0 bottom-0 flex justify-center bg-neutral-900'>
+      <div className='fixed inset-x-0 bottom-0 flex justify-center bg-neutral-900 px-2'>
         <div className='bg-neutral-800 p-2 rounded-3xl w-full max-w-3xl mb-3'>
           <textarea
             className='w-full resize-none outline-0 p-3'
