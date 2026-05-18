@@ -24,7 +24,7 @@ const App = () => {
       setIsFetchingMessages(true);
       setError(null);
       try {
-        const { data } = await axios.get(`http://localhost:8000/chat/${threadId.current}`);
+        const { data } = await axios.get(`/chat/${threadId.current}`);
         setMessages(data?.messages ?? []);
       } catch (error) {
         console.error(error);
@@ -61,7 +61,7 @@ const App = () => {
     // Send message to LLM
 
     try {
-      const { data } = await axios.post('http://localhost:8000/chat', {
+      const { data } = await axios.post('/chat', {
         message: inputMessage,
         threadId: threadId.current,
       });
