@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node --env-file=.env server.js"
+    "build": "cd frontend && npm run build",
+    "start": "node --env-file=.env server.js",
+    "start:prod": "node --env-file=.env server.js"
   },
   "keywords": [],
   "author": "",
